@@ -4,34 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dan.mathgame.GameActivity">
+    tools:context="com.example.dan.mathgame.GameActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
         android:id="@+id/textPartA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
         android:text="2"
         android:textSize="70sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="66dp" />
 
     <TextView
         android:id="@+id/textOperator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="44dp"
+        android:layout_height="83dp"
         android:text="X"
         android:textSize="70sp"
         tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/textPartB"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:text="2"
         android:textSize="70sp"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="280dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -39,33 +41,33 @@
         android:layout_height="wrap_content"
         android:text="="
         android:textSize="70sp"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="191dp" />
+        tools:layout_editor_absoluteY="230dp"
+        tools:layout_editor_absoluteX="173dp" />
 
     <Button
         android:id="@+id/buttonChoice1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="68dp"
         android:text="2"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="370dp" />
+        tools:layout_editor_absoluteY="380dp"
+        tools:layout_editor_absoluteX="34dp" />
 
     <Button
         android:id="@+id/buttonChoice2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="68dp"
         android:text="4"
         android:textSize="40sp"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="370dp" />
+        tools:layout_editor_absoluteY="380dp" />
 
     <Button
         android:id="@+id/buttonChoice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="68dp"
         android:text="6"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="370dp" />
+        tools:layout_editor_absoluteY="380dp"
+        tools:layout_editor_absoluteX="280dp" />
 </android.support.constraint.ConstraintLayout>
