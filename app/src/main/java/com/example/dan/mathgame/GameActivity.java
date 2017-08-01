@@ -22,7 +22,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     int currentScore = 0;
     int currentLevel = 1;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +44,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         buttonObjectChoice1.setOnClickListener(this);
         buttonObjectChoice2.setOnClickListener(this);
         buttonObjectChoice3.setOnClickListener(this);
+
+        textObjectScore.setText("Score: " + currentScore);
+        textObjectLevel.setText("Level: " + currentLevel);
 
         setQuestion();
     }
