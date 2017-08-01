@@ -45,10 +45,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         buttonObjectChoice1.setOnClickListener(this);
         buttonObjectChoice2.setOnClickListener(this);
         buttonObjectChoice3.setOnClickListener(this);
+
+        setQuestion();
     }
     @Override
     public void onClick(View view) {
-        int answerGiven;
+        int answerGiven = 0;
         switch (view.getId()) {
             case R.id.buttonChoice1:
                 answerGiven = Integer.parseInt("" + buttonObjectChoice1.getText());
@@ -60,6 +62,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 answerGiven = Integer.parseInt("" + buttonObjectChoice3.getText());
                 break;
         }
+        updateScoreAndLevel(answerGiven);
+        setQuestion();
     }
 
     void setQuestion() {
