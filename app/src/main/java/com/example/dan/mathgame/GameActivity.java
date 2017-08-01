@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -101,7 +102,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    void updateScoreAndLevel (int answerGiven) {
+    void updateScoreAndLevel(int answerGiven) {
         if (isCorrect(answerGiven)) {
             for (int i = 1; i <= currentLevel; i++) {
                 currentScore = currentScore + i;
@@ -115,5 +116,19 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         // Update the two TextViews
         textObjectScore.setText("Score: " + currentScore);
         textObjectLevel.setText("Level: " + currentLevel);
+    }
+
+    boolean isCorrect(int answerGiven) {
+        boolean correctTrueOrFalse;
+        if (answerGiven == correctAnswer) {
+            Toast.makeText(getApplicationContext(), "Well done!",
+                    Toast.LENGTH_LONG).show();
+            correctTrueOrFalse = true;
+        } else {
+            Toast.makeText(getApplicationContext(), "Sorry",
+                    Toast.LENGTH_LONG).show();
+            correctTrueOrFalse = false;
+        }
+        return correctTrueOrFalse;
     }
 }
