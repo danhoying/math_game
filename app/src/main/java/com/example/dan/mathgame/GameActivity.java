@@ -100,4 +100,20 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+    void updateScoreAndLevel (int answerGiven) {
+        if (isCorrect(answerGiven)) {
+            for (int i = 1; i <= currentLevel; i++) {
+                currentScore = currentScore + i;
+            }
+            currentLevel++;
+        } else {
+            currentScore = 0;
+            currentLevel = 1;
+        }
+
+        // Update the two TextViews
+        textObjectScore.setText("Score: " + currentScore);
+        textObjectLevel.setText("Level: " + currentLevel);
+    }
 }
