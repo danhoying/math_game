@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     int correctAnswer;
@@ -55,6 +57,46 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonChoice3:
                 answerGiven = Integer.parseInt("" + buttonObjectChoice3.getText());
+                break;
+        }
+    }
+
+    void setQuestion() {
+        // generate the parts of the question
+        int numberRange = currentLevel * 3;
+        Random randInt = new Random();
+
+        int partA = randInt.nextInt(numberRange);
+        partA++; // don't want a zero value
+
+        int partB = randInt.nextInt(numberRange);
+        partB++; // don't want a zero value
+
+        correctAnswer = partA * partB;
+        int wrongAnswer1 = correctAnswer - 2;
+        int wrongAnswer2 = correctAnswer + 2;
+
+        textObjectPartA.setText("" + partA);
+        textObjectPartB.setText("" + partB);
+
+        // set the multi choice buttons
+        // A number between 0 and 2
+        int buttonLayout = randInt.nextInt(3);
+        switch (buttonLayout) {
+            case 0:
+                buttonObjectChoice1.setText("" + correctAnswer);
+                buttonObjectChoice2.setText("" + wrongAnswer1);
+                buttonObjectChoice3.setText("" + wrongAnswer2);
+                break;
+            case 1:
+                buttonObjectChoice2.setText("" + correctAnswer);
+                buttonObjectChoice3.setText("" + wrongAnswer1);
+                buttonObjectChoice1.setText("" + wrongAnswer2);
+                break;
+            case 2:
+                buttonObjectChoice3.setText("" + correctAnswer);
+                buttonObjectChoice1.setText("" + wrongAnswer1);
+                buttonObjectChoice2.setText("" + wrongAnswer2);
                 break;
         }
     }
